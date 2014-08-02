@@ -17,7 +17,7 @@ INSTALLATION
 FILTER WORDS LIST
 -----------------
 
-  The filter words list is a list of words ('g_text' in below code). It will be processed by String.split() and String.search() in JavaScript. String.search() parses regular expression string, so you would quote ('\') the special symbols of the regular expression (e.g. [, ], (, ), etc.)
+  The filter words list is a list of words ('g_text' in below code). It will be processed by String.split() and String.search() in JavaScript. String.search() parses regular expression string, so you can quote ('\') the metacharacters of the regular expression (e.g. [, ], (, ), ., etc.)
 
 
 ```javascript
@@ -30,6 +30,15 @@ FILTER WORDS LIST
     }
 ```
 
+EXAMPLES
+--------
+- "a"
+> Hide the tweet including "a".
+- "\[ab\]"
+> Hide the tweet including "[ab]".
+- "[ab]"
+> Hide the tweet including "a" or "b". (regular expression)
+
 
 TODO
 ----
@@ -38,6 +47,7 @@ TODO
 - To modify not to need restart.
 - Be able to set any user name to hide.
 - Use MutationObserver instead of DOMAttrModified.
+- Store hidden tweets to the other windows for just in case.
 
 
 COLLABORATORS
