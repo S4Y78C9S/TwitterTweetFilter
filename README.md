@@ -45,5 +45,5 @@ COLLABORATORS
 
   I am looking for any collaborators. please contact me.
 
-    Tanaka Kenta <a3269684@yahoo.co.jp>
+    Kenta Tanaka <a3269684@yahoo.co.jp>
 
