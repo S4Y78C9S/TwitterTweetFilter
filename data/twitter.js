@@ -2,22 +2,22 @@
 
 var g_text = "";
 
-self.port.on("getElements", function(pref) {
+self.port.on("changePrefs", function(pref) {
   g_text = pref;
-  console.log("getElements: " + g_text);
+  //console.log("changePrefs: " + g_text);
   
 
 });
 
-// trim space head of string
+// trim space from head of string
 String.prototype.ltrim = function() {
 	return this.replace(/^\s+/, "");
 }
-// trim space tail of string
+// trim space from tail of string
 String.prototype.rtrim = function() {
 	return this.replace(/\s+$/, "");
 }
-// trim space head and tail of string
+// trim space from head and tail of string
 String.prototype.trim = function() {
 	return this.replace(/^\s+|\s+$/g, "");
 }
@@ -27,7 +27,7 @@ $(document).bind('DOMAttrModified',function(event){
   
   //var a = simplePrefs.prefs['somePreference'];
   //console.log(a);
-  console.log("twitter.js: " + g_text);
+  //console.log("twitter.js: " + g_text);
   
   if ( g_text == "" ) {
     return;
@@ -41,9 +41,9 @@ $(document).bind('DOMAttrModified',function(event){
     //$(this).children("div").children("div.content").hide();
     //$(this).children("div").children("div.content").children("p").hide();
     
-    console.log("Hello World");
+    //console.log("Hello World");
     var str = $(this).children("div").children("div.content").children("p").text();
-    console.log(str);
+    //console.log(str);
     
     var nglist = g_text.split(",");
     for ( var i = 0; i < nglist.length; ++i) {
@@ -55,8 +55,8 @@ $(document).bind('DOMAttrModified',function(event){
         
         var index = str.search(ngword);
         //var index = str.search("e");
-        console.log(ngword);
-        console.log(index);
+        //console.log(ngword);
+        //console.log(index);
         if ( index != -1 ) {
             $(this).hide();
         }
