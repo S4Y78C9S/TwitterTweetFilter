@@ -9,6 +9,19 @@ self.port.on("getElements", function(pref) {
 
 });
 
+// trim space head of string
+String.prototype.ltrim = function() {
+	return this.replace(/^\s+/, "");
+}
+// trim space tail of string
+String.prototype.rtrim = function() {
+	return this.replace(/\s+$/, "");
+}
+// trim space head and tail of string
+String.prototype.trim = function() {
+	return this.replace(/^\s+|\s+$/g, "");
+}
+
 $(document).bind('DOMAttrModified',function(event){
   //console.log(event);
   
@@ -35,6 +48,7 @@ $(document).bind('DOMAttrModified',function(event){
     var nglist = g_text.split(",");
     for ( var i = 0; i < nglist.length; ++i) {
         var ngword = nglist[i];
+        ngword = ngword.trim();
         if ( ngword == "" ) {
             continue;
         }
