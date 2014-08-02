@@ -1,3 +1,8 @@
+WHAT'S THIS
+
+  A addon to hide tweet including specified words.
+
+
 INSTALLATION
 
 1. Install twittertweetfilter.xpi.
