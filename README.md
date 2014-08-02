@@ -9,6 +9,8 @@ INSTALLATION
 2. Addon -> TwitterTweetFilter -> Settings.
 3. Set the filter words list.
 4. Restart the firefox.
+5. Go to https://twitter.com/
+6. The tweets including the words you specified will be hidden.
 
 
 FILTER WORDS LIST
