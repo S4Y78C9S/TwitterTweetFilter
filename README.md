@@ -34,7 +34,7 @@ EXAMPLES
 --------
 - "a"
 > Hide the tweet including "a".
-- "\[ab\]"
+- "\\[ab\\]"
 > Hide the tweet including "[ab]".
 - "[ab]"
 > Hide the tweet including "a" or "b". (regular expression)
