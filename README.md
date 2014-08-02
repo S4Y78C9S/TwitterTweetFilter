@@ -25,3 +25,18 @@ FILTER WORDS LIST
         }
     }
 ------------------------------------------------------
+
+
+TODO
+
+Add setting dialog.
+To modify not to need restart.
+Be able to set any user name to hide.
+Use MutationObserver instead of DOMAttrModified.
+
+
+COLLABORATORS
+
+  I am looking for any collaborators. please contact me
+    Tanaka Kenta <a3269684@yahoo.co.jp>
+
