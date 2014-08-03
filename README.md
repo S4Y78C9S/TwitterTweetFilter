@@ -1,6 +1,6 @@
 WHAT'S THIS
 ===========
-  A addon to hide tweet including specified words.
+  To hide the tweets including specified words.
 
 
 INSTALLATION
