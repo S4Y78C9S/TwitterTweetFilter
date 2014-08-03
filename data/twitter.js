@@ -5,12 +5,12 @@ var g_text = "";
 self.port.on("changePrefs", function(pref) {
   g_text = pref;
   //console.log("changePrefs: " + g_text);
-  
+  main();
 
 });
 
-
-$(document).bind('DOMAttrModified',function(event){
+function main() {
+  console.log("=== main() start ===");
   //console.log(event);
   
   //var a = simplePrefs.prefs['somePreference'];
@@ -51,6 +51,10 @@ $(document).bind('DOMAttrModified',function(event){
     }
     
   });
+}
+
+$(document).bind('DOMAttrModified',function(event){
+    main();
 });
 
 
