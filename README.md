@@ -9,9 +9,8 @@ INSTALLATION
 1. Install twittertweetfilter.xpi.
 2. Addon -> TwitterTweetFilter -> Settings.
 3. Set the filter words list.
-4. Restart the firefox.
-5. Go to https://twitter.com/
-6. The tweets including the words you specified will be hidden.
+4. Go to https://twitter.com/
+5. The tweets including the words you specified will be hidden.
 
 
 FILTER WORDS LIST
@@ -44,8 +43,7 @@ TODO
 ----
 
 - Add setting dialog.
-- To modify not to need restart.
-- Be able to set any user name to hide.
+- Be able to set (any user name, filter words list) pair to hide.
 - Use MutationObserver instead of DOMAttrModified.
 - Store hidden tweets to the other windows for just in case.
 

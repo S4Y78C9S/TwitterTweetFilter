@@ -51,11 +51,51 @@ function main() {
     }
     
   });
-}
+};
 
+
+
+/*
 $(document).bind('DOMAttrModified',function(event){
     main();
 });
+*/
+
+
+
+
+// オブザーバインスタンスを作成
+var observer = new MutationObserver(function(mutations) {
+
+    observer.disconnect();
+    console.log("=== MutationObserver() start ===");
+    console.log("mutations = " + mutations);
+    main();
+    observer.observe( document, config);
+
+/*
+  mutations.forEach(function(mutation) {
+    console.log("=== mutations.forEach() start ===");
+    console.log("mutation = " + mutation);
+    var target = mutation.target;
+    console.log("target = " + target);
+    console.log("target.nodeName = " + target.nodeName);
+    if ( target.nodeName == "DIV" || target.nodeName == "LI" ) {
+        console.log(mutation.type);
+        main();
+    }
+  });
+*/
+});
+ 
+// オブザーバの設定
+var config = { attributes: true, childList: true, characterData: true, subtree:true }
+ 
+// 対象ノードとオブザーバの設定を渡す
+observer.observe( document, config);
+console.log("=== observer.observe() done ===");
+
+
 
 
 
