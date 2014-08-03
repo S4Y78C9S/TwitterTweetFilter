@@ -44,7 +44,6 @@ TODO
 
 - Add setting dialog.
 - Be able to set (any user name, filter words list) pair to hide.
-- Use MutationObserver instead of DOMAttrModified.
 - Store hidden tweets to the other windows for just in case.
 
 
