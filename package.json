@@ -5,7 +5,7 @@
   "description": "Filter the tweet including specified words.",
   "author": "Kenta Tanaka <a3269684@yahoo.co.jp>",
   "license": "MPL 2.0",
-  "version": "0.3",
+  "version": "0.2",
   "preferences": [{
         "name": "filterwordslist",
         "title": "filter words list",

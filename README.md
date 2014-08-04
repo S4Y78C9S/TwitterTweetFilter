@@ -7,7 +7,7 @@ INSTALLATION
 ------------
 
 1. Install twittertweetfilter.xpi.
-2. Addon -> TwitterTweetFilter -> Settings.
+2. Add-ons -> Extensions -> TwitterTweetFilter -> Options.
 3. Set the filter words list.
 4. Go to https://twitter.com/
 5. The tweets including the words you specified will be hidden.
@@ -37,6 +37,8 @@ EXAMPLES
 > Hide the tweet including "[ab]".
 - "[ab]"
 > Hide the tweet including "a" or "b". (regular expression)
+- "a, b"
+> Hide the tweet including "a" or "b".
 
 
 TODO
