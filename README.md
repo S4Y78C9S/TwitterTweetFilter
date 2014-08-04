@@ -22,7 +22,8 @@ FILTER WORDS LIST
 ```javascript
     var nglist = g_text.split(",");
     for ( var i = 0; i < nglist.length; ++i) {
-        var index = str.search(ngword);
+        var obj = new RegExp( ngword, "i");
+        var index = str.search(obj);
         if ( index != -1 ) {
             $(this).hide();
         }
@@ -32,13 +33,13 @@ FILTER WORDS LIST
 EXAMPLES
 --------
 - "a"
-> Hide the tweet including "a".
+> Hide the tweet including "a" or "A".
 - "\\[ab\\]"
-> Hide the tweet including "[ab]".
+> Hide the tweet including "[ab]" or "[AB]" or "[aB]" or "[Ab]".
 - "[ab]"
-> Hide the tweet including "a" or "b". (regular expression)
+> Hide the tweet including "a" or "b" or "A" or "B". (regular expression)
 - "a, b"
-> Hide the tweet including "a" or "b".
+> Hide the tweet including "a" or "A" or "b" or "B".
 
 
 TODO

@@ -9,30 +9,7 @@ self.port.on("changePrefs", function(pref) {
 
 });
 
-function main() {
-  //console.log("=== main() start ===");
-  //console.log(event);
-  
-  //var a = simplePrefs.prefs['somePreference'];
-  //console.log(a);
-  //console.log("twitter.js: " + g_text);
-  
-  if ( g_text == "" ) {
-    return;
-  }
-  
-  //class="bdb cfx spaced"
-  $("li[data-item-type='tweet']").each(function() {
-    //$(this).css("color", "blue");
-    //$(this).remove();
-    //$(this).children("div").hide();
-    //$(this).children("div").children("div.content").hide();
-    //$(this).children("div").children("div.content").children("p").hide();
-    
-    //console.log("Hello World");
-    var str = $(this).children("div").children("div.content").children("p").text();
-    //console.log(str);
-    
+function tweet_hide_check( target, str) {
     var nglist = g_text.split(",");
     for ( var i = 0; i < nglist.length; ++i) {
         var ngword = nglist[i];
@@ -41,16 +18,39 @@ function main() {
             continue;
         }
         
-        var index = str.search(ngword);
-        //var index = str.search("e");
-        //console.log(ngword);
-        //console.log(index);
+        //var index = str.search(ngword);
+        
+        var obj = new RegExp( ngword, "i");
+        var index = str.search( obj );
         if ( index != -1 ) {
-            $(this).hide();
+            target.hide();
+            //console.log("=== hide:" + str);
         }
     }
+};
+
+function main() {
+  if ( g_text == "" ) {
+    return;
+  }
+  
+  $("li[data-item-type='tweet']").each(function() {
+    var str = $(this).children("div").children("div.content").children("p").text();
+    tweet_hide_check( $(this), str );
     
   });
+  $("div[data-component-context='replies']").each(function() {
+    var str = $(this).children("div.content").children("p").text();
+    tweet_hide_check( $(this), str );
+    
+  });
+  /*
+  $("div.has-conversation-module").each(function() {
+    var str = $(this).children("div.content").children("p").text();
+    tweet_hide_check( $(this), str );
+    
+  });
+  */
 };
 
 

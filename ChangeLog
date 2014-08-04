@@ -6,6 +6,8 @@ https://github.com/S4Y78C9S/TwitterTweetFilter
 03 August 2014, v0.3
 - Use MutationObserver instead of DOMAttrModified.
 - Use jquery-2.1.1.min.js instead of jquery-2.1.1.js.
+- Case insensitive.
+- Hide also replay tweet.
 
 02 August 2014, v0.2
 - trim space from filter words list.
