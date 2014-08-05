@@ -50,6 +50,9 @@ TODO
 - Be able to set (any user name, filter words list) pair to hide.
 - Store hidden tweets to the other windows for just in case.
 
+SIMILAR ADDONS
+--------------
+- Larry filter for Twitter (https://addons.mozilla.org/firefox/addon/larry-filter/)
 
 COLLABORATORS
 -------------

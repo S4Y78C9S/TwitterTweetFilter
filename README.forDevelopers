@@ -1,0 +1,12 @@
+HOW TO DEVELOP
+==============
+
+1. Install Firefox SDK.
+  https://developer.mozilla.org/en-US/Add-ons/SDK
+2. cd \addon-sdk-x.xx
+3. > bin\activate
+4. cd \TwitterTweetFilter
+5. cfx run
+6. cfx xpi
+
+
