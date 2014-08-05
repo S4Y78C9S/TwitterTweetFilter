@@ -18,6 +18,7 @@ FILTER WORDS LIST
 
   The filter words list is a list of words ('g_text' in below code). It will be processed by String.split() and String.search() in JavaScript. String.search() parses regular expression string, so you can quote ('\') the metacharacters of the regular expression (e.g. [, ], (, ), ., etc.)
 
+  Case insensitive.
 
 ```javascript
     var nglist = g_text.split(",");
@@ -33,13 +34,13 @@ FILTER WORDS LIST
 EXAMPLES
 --------
 - "a"
-> Hide the tweet including "a" or "A".
+> Hide tweet including "a" or "A".
 - "\\[ab\\]"
-> Hide the tweet including "[ab]" or "[AB]" or "[aB]" or "[Ab]".
+> Hide tweet including "[ab]" or "[AB]" or "[aB]" or "[Ab]".
 - "[ab]"
-> Hide the tweet including "a" or "b" or "A" or "B". (regular expression)
+> Hide tweet including "a" or "b" or "A" or "B". (regular expression)
 - "a, b"
-> Hide the tweet including "a" or "A" or "b" or "B".
+> Hide tweet including "a" or "A" or "b" or "B".
 
 
 TODO
