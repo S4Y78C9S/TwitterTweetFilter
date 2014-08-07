@@ -16,7 +16,7 @@ INSTALLATION
 FILTER WORDS LIST
 -----------------
 
-  The filter words list is a list of words ('g_text' in below code). It will be processed by String.split() and String.search() in JavaScript. String.search() parses regular expression string, so you can quote ('\') the metacharacters of the regular expression (e.g. [, ], (, ), ., etc.)
+  The filter words list is a list of words ('g_text' in below code). It will be processed by String.split() and String.search() in JavaScript. String.search() parses regular expression string, so you can quote ('\') the metacharacters of the regular expression (e.g., [, ], (, ), ., etc.)
 
   Case insensitive.
 

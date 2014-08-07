@@ -7,10 +7,10 @@
   "license": "MPL 2.0",
   "version": "0.3",
   "preferences": [{
-        "name": "filterwordslist",
-        "title": "filter words list",
-        "description": "e.g. abc, :\\), hide me, \\[test\\]",
-        "type": "string",
-        "value": ""
-    }]
+    "name": "filterwordslist",
+    "title": "filter words list",
+    "description": "e.g. abc, :\\), hide me, \\[test\\]",
+    "type": "string",
+    "value": ""
+  }]
 }
