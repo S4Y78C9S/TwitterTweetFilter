@@ -3,13 +3,33 @@
 var g_text = "";
 
 self.port.on("changePrefs", function(pref) {
-  g_text = pref;
-  //console.log("changePrefs: " + g_text);
-  main();
+    g_text = pref;
+    //console.log("changePrefs: " + g_text);
+    main();
 
 });
 
+// 文字列を配列に変換
+var str2array = function(str) {
+    var array = [],i,il=str.length;
+    for(i=0;i<il;i++) array.push(str.charCodeAt(i));
+    return array;
+};
+
 function tweet_hide_check( target, str) {
+    //console.log("str: " + str);
+    //console.log("str: " + Encoding.convert(str, 'UTF8', 'SJIS'));
+    //console.log("str: " + Encoding.convert(str, 'UNICODE', 'SJIS'));
+    //console.log("str: " + Encoding.convert(str, 'SJIS', 'UNICODE'));
+    //console.log("str: " + Encoding.convert(str, 'SJIS', 'UTF8'));
+
+    //str   = "あいうえお",
+    //array = str2array( str ),
+    //sjis_array = Encoding.convert(array, "SJIS", "UNICODE"),
+    //sjis_array = Encoding.convert(array, "SJIS", "UTF8"),
+    //sjis       = Encoding.codeToString( sjis_array ); // 配列から文字列変換する関数は用意されている
+    //console.log("str: " + str);
+
     var nglist = g_text.split(",");
     for ( var i = 0; i < nglist.length; ++i) {
         var ngword = nglist[i];
