@@ -18,17 +18,10 @@ var str2array = function(str) {
 
 function tweet_hide_check( target, str) {
     //console.log("str: " + str);
-    //console.log("str: " + Encoding.convert(str, 'UTF8', 'SJIS'));
-    //console.log("str: " + Encoding.convert(str, 'UNICODE', 'SJIS'));
-    //console.log("str: " + Encoding.convert(str, 'SJIS', 'UNICODE'));
-    //console.log("str: " + Encoding.convert(str, 'SJIS', 'UTF8'));
+    str = str.replace(/\r?\n/g, " ");
+    str = str.replace(/ +/g, " ");
+    //console.log("str(\\r\\n->space): " + str);
 
-    //str   = "あいうえお",
-    //array = str2array( str ),
-    //sjis_array = Encoding.convert(array, "SJIS", "UNICODE"),
-    //sjis_array = Encoding.convert(array, "SJIS", "UTF8"),
-    //sjis       = Encoding.codeToString( sjis_array ); // 配列から文字列変換する関数は用意されている
-    //console.log("str: " + str);
 
     var nglist = g_text.split(",");
     for ( var i = 0; i < nglist.length; ++i) {
