@@ -17,7 +17,7 @@ var str2array = function(str) {
 };
 
 function tweet_hide_check( target, str_orig) {
-    //console.log("str: " + str);
+    //console.log("str_orig: " + str_orig);
     str = str_orig.replace(/\r?\n/g, " ");
     str = str.replace(/ +/g, " ");
     //console.log("str(\\r\\n->space): " + str);
@@ -37,6 +37,7 @@ function tweet_hide_check( target, str_orig) {
         var index = str.search( obj );
         var index_orig = str_orig.search( obj );
         if ( index != -1 || index_orig != -1) {
+            //console.log("=== match: ngword=" + ngword + ", str_orig=" + str_orig);
             target.hide();
             //console.log("=== hide:" + str);
         }
@@ -88,7 +89,8 @@ var observer = new MutationObserver(function(mutations) {
 });
  
 // オブザーバの設定
-var config = { attributes: true, childList: true, characterData: true, subtree:true }
+//var config = { attributes: true, childList: true, characterData: true, subtree:true }
+var config = { childList: true, subtree:true }
  
 // 対象ノードとオブザーバの設定を渡す
 observer.observe( document, config);

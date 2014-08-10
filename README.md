@@ -1,6 +1,6 @@
 WHAT'S THIS
 ===========
-  To hide the tweets including specified words.
+  Hide the tweets including specified words.
 
 
 INSTALLATION
@@ -33,6 +33,7 @@ FILTER WORDS LIST
 
 EXAMPLES
 --------
+
 - "a"
 > Hide tweet including "a" or "A".
 - "\\[ab\\]"
@@ -41,6 +42,8 @@ EXAMPLES
 > Hide tweet including "a" or "b" or "A" or "B". (regular expression)
 - "a, b"
 > Hide tweet including "a" or "A" or "b" or "B".
+- "\\bfat\\b"
+> Hide tweet including "fat" a word. "sofat" and "fatty" will not be hidden. (regular expression)
 
 
 TODO
@@ -49,10 +52,13 @@ TODO
 - Add setting dialog.
 - Be able to set (any user name, filter words list) pair to hide.
 - Store hidden tweets to the other windows for just in case.
+- Own Addon Icon.
 
 SIMILAR ADDONS
 --------------
 - Larry filter for Twitter (https://addons.mozilla.org/firefox/addon/larry-filter/)
+-- One of the twitter filter but doesn't support UTF-8 :(
+
 
 COLLABORATORS
 -------------
