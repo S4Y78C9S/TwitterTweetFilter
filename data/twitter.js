@@ -16,9 +16,9 @@ var str2array = function(str) {
     return array;
 };
 
-function tweet_hide_check( target, str) {
+function tweet_hide_check( target, str_orig) {
     //console.log("str: " + str);
-    str = str.replace(/\r?\n/g, " ");
+    str = str_orig.replace(/\r?\n/g, " ");
     str = str.replace(/ +/g, " ");
     //console.log("str(\\r\\n->space): " + str);
 
@@ -35,7 +35,8 @@ function tweet_hide_check( target, str) {
         
         var obj = new RegExp( ngword, "i");
         var index = str.search( obj );
-        if ( index != -1 ) {
+        var index_orig = str_orig.search( obj );
+        if ( index != -1 || index_orig != -1) {
             target.hide();
             //console.log("=== hide:" + str);
         }
@@ -43,6 +44,7 @@ function tweet_hide_check( target, str) {
 };
 
 function main() {
+  //console.log("=== main() start ===");
   if ( g_text == "" ) {
     return;
   }
