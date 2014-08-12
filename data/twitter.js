@@ -9,12 +9,7 @@ self.port.on("changePrefs", function(pref) {
 
 });
 
-// 文字列を配列に変換
-var str2array = function(str) {
-    var array = [],i,il=str.length;
-    for(i=0;i<il;i++) array.push(str.charCodeAt(i));
-    return array;
-};
+
 
 function tweet_hide_check( target, str_orig) {
     //console.log("str_orig: " + str_orig);
@@ -76,7 +71,7 @@ function main() {
 
 
 
-// オブザーバインスタンスを作成
+
 var observer = new MutationObserver(function(mutations) {
 
     observer.disconnect();
@@ -88,11 +83,10 @@ var observer = new MutationObserver(function(mutations) {
 
 });
  
-// オブザーバの設定
-//var config = { attributes: true, childList: true, characterData: true, subtree:true }
+
 var config = { childList: true, subtree:true }
  
-// 対象ノードとオブザーバの設定を渡す
+
 observer.observe( document, config);
 //console.log("=== observer.observe() done ===");
 
