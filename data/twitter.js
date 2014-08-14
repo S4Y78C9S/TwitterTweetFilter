@@ -11,7 +11,7 @@ self.port.on("changePrefs", function(pref) {
 
 
 
-function tweet_hide_check( target, str_orig) {
+function tweet_hide_check( target_element, str_orig) {
     //console.log("str_orig: " + str_orig);
     str = str_orig.replace(/\r?\n/g, " ");
     str = str.replace(/ +/g, " ");
@@ -33,7 +33,7 @@ function tweet_hide_check( target, str_orig) {
         var index_orig = str_orig.search( obj );
         if ( index != -1 || index_orig != -1) {
             //console.log("=== match: ngword=" + ngword + ", str_orig=" + str_orig);
-            target.hide();
+            target_element.hide();
             //console.log("=== hide:" + str);
         }
     }
