@@ -49,10 +49,11 @@ EXAMPLES
 TODO
 ----
 
-- Add setting dialog.
-- Be able to set (any user name, filter words list) pair to hide.
-- Store hidden tweets to the other windows for just in case.
+- Add a preferences dialog.
+- Be able to set usernames to hide.
+- Store hidden tweets to the other window for just in case.
 - Own Addon Icon.
+
 
 SIMILAR ADDONS
 --------------

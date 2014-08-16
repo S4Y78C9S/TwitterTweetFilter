@@ -4,8 +4,8 @@ https://github.com/S4Y78C9S/TwitterTweetFilter
 
 
 10 August 2014, v0.4
-- Replace a newline in tweet to a space.
-- Replace two or more spaces to one space.
+- Replace a newline to a space in tweet.
+- Replace two or more spaces to one space in tweet.
 
 03 August 2014, v0.3
 - Use MutationObserver instead of DOMAttrModified.
