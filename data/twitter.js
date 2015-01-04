@@ -48,16 +48,40 @@ function main() {
     return;
   }
   
+  // timeline
   $("li[data-item-type='tweet']").each(function() {
-    var str = $(this).children("div").children("div.content").children("p").text();
+    // debug
+    /*
+    var a = $(this).text();
+    console.log("a="+a);
+    var b = $(this).children("div").text();
+    console.log("b="+b);
+    var c = $(this).children("div").children("div.content").text();
+    console.log("c="+c);
+    var d = $(this).find("div.content").text();
+    console.log("d="+d);
+    */
+    //var str = $(this).children("div").children("div.content").children("p").text();
+    var str = $(this).find("div.content").children("p").text();
     tweet_hide_check( $(this), str );
     
   });
+
+  // reply
   $("div[data-component-context='replies']").each(function() {
     var str = $(this).children("div.content").children("p").text();
     tweet_hide_check( $(this), str );
     
   });
+
+  /*
+  // search result
+  $("div[data-component-context='replies']").each(function() {
+    var str = $(this).children("div.content").children("p").text();
+    tweet_hide_check( $(this), str );
+    
+  });
+  */
   /*
   $("div.has-conversation-module").each(function() {
     var str = $(this).children("div.content").children("p").text();
