@@ -7,8 +7,8 @@ https://github.com/S4Y78C9S/TwitterTweetFilter
 - Support hinding tweets on search results.
 
 10 August 2014, v0.4
-- Replace a newline to a space in tweets.
-- Replace two or more spaces to one space in tweets.
+- Replace a newline code to a space character in all tweets.
+- Replace two or more spaces to one space in all tweets.
 
 03 August 2014, v0.3
 - Use MutationObserver instead of DOMAttrModified.

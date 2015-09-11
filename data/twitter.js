@@ -12,7 +12,7 @@ self.port.on("changePrefs", function(pref) {
 
 
 function tweet_hide_check( target_element, str_orig) {
-    console.log("str_orig: " + str_orig);
+    //console.log("str_orig: " + str_orig);
     str = str_orig.replace(/\r?\n/g, " ");
     str = str.replace(/ +/g, " ");
     //console.log("str(\\r\\n->space): " + str);
@@ -25,15 +25,15 @@ function tweet_hide_check( target_element, str_orig) {
         if ( ngword == "" ) {
             continue;
         }
-        console.log("ngword="+ngword);
+        //console.log("ngword="+ngword);
 
         //var index = str.search(ngword);
         
         var obj = new RegExp( ngword, "i");
         var index = str.search( obj );
         var index_orig = str_orig.search( obj );
-        console.log("index="+index);
-        console.log("index_orig="+index_orig);
+        //console.log("index="+index);
+        //console.log("index_orig="+index_orig);
         if ( index != -1 || index_orig != -1) {
             console.log("=== match: ngword=" + ngword + ", str_orig=" + str_orig);
             target_element.hide();
@@ -119,5 +119,5 @@ observer.observe( document, config);
 
 
 
-
+//observer.disconnect();
 
