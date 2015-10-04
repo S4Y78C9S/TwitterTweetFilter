@@ -15,7 +15,7 @@ var worker = pageMod.PageMod({
   include: "*.twitter.com",
   contentScriptWhen: 'start',
   contentScriptFile: [
-    self.data.url("jquery-2.1.1.min.js"),
+    self.data.url("jquery-2.1.4.min.js"),
     self.data.url("twitter.js")],
   onAttach: function(worker) {
     worker.port.emit("changePrefs", require('sdk/simple-prefs').prefs['filterwordslist']);

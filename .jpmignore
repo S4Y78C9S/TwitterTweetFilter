@@ -8,3 +8,6 @@
 profile
 .jpmignore
 test
+.git
+.gitignore
+
