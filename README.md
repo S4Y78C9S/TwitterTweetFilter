@@ -4,5 +4,5 @@ Hide tweets including the words.
 
 Configurations
 ========
-- configure the words list you don't want to see. (see screenshot)
+- configure words list you don't want to see. (Regular expression)
 Add-ons -> Extensions -> TwitterTweetFilter -> Options.
