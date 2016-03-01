@@ -12,14 +12,14 @@ var g_text = "";
 // The script replaces the page contents with a message
 
 var worker = pageMod.PageMod({
-  include: "*.twitter.com",
-  contentScriptWhen: 'start',
-  contentScriptFile: [
-    self.data.url("jquery-2.1.4.min.js"),
-    self.data.url("twitter.js")],
-  onAttach: function(worker) {
-    worker.port.emit("changePrefs", require('sdk/simple-prefs').prefs['filterwordslist']);
-  }
+	include: "*.twitter.com",
+	contentScriptWhen: 'start',
+	contentScriptFile: [
+		self.data.url("jquery-2.1.4.min.js"),
+		self.data.url("twitter.js")],
+	onAttach: function(worker) {
+		worker.port.emit("changePrefs", require('sdk/simple-prefs').prefs['filterwordslist']);
+	}
 });
 
 // affect to https://twitter.com tab when user install this addon with opening https://twitter.com at another tab.
@@ -28,12 +28,12 @@ var worker = pageMod.PageMod({
 
 
 function onPrefChange(prefName) {
-    //console.log("The " + prefName + " preference changed.");
-    //console.log( require('sdk/simple-prefs').prefs['filterwordslist'] );
-    //console.log( "onPrefChange: " + require('sdk/simple-prefs').prefs[prefName] );
-    
-    g_text = require('sdk/simple-prefs').prefs['filterwordslist'];
-    worker.port.emit("changePrefs", require('sdk/simple-prefs').prefs['filterwordslist']);
+	//console.log("The " + prefName + " preference changed.");
+	//console.log( require('sdk/simple-prefs').prefs['filterwordslist'] );
+	//console.log( "onPrefChange: " + require('sdk/simple-prefs').prefs[prefName] );
+	
+	g_text = require('sdk/simple-prefs').prefs['filterwordslist'];
+	worker.port.emit("changePrefs", require('sdk/simple-prefs').prefs['filterwordslist']);
 }
 
 
