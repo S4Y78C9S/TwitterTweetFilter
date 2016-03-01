@@ -64,14 +64,16 @@ function main() {
     console.log("d="+d);
     */
     //var str = $(this).children("div").children("div.content").children("p").text();
-    var str = $(this).find("div.content").children("p").text();
+    //var str = $(this).find("div.content").children("p").text();
+    var str = $(this).find("div.content").find("p").text();
     tweet_hide_check( $(this), str );
     
   });
 
   // reply
   $("div[data-component-context='replies']").each(function() {
-    var str = $(this).children("div.content").children("p").text();
+    //var str = $(this).children("div.content").children("p").text();
+    var str = $(this).find("div.content").find("p").text();
     tweet_hide_check( $(this), str );
     
   });
