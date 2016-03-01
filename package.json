@@ -2,13 +2,13 @@
   "title": "TwitterTweetFilter",
   "name": "twittertweetfilter",
   "id": "twittertweetfilter@jetpack",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "Hide tweets including specified words.",
   "main": "index.js",
   "author": "Kenta Tanaka",
   "engines": {
-    "firefox": ">=19.0 <=45.0",
-    "fennec": ">=19.0 <=45.0"
+    "firefox": ">=19.0 <=48.0",
+    "fennec": ">=19.0 <=48.0"
   },
   "license": "GNU 3.0",
   "preferences": [{

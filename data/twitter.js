@@ -37,7 +37,7 @@ function tweet_hide_check( target_element, str_orig) {
 		//console.log("index="+index);
 		//console.log("index_orig="+index_orig);
 		if ( index != -1 || index_orig != -1) {
-			console.log("=== match: ngword=" + ngword + ", str_orig=" + str_orig);
+			//console.log("=== match: ngword=" + ngword + ", str_orig=" + str_orig);
 			target_element.hide();
 			//console.log("=== hide:" + str);
 		}
