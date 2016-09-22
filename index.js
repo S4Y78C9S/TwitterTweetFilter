@@ -12,7 +12,7 @@ var g_text = "";
 // The script replaces the page contents with a message
 
 var worker = pageMod.PageMod({
-	include: "*.twitter.com",
+	include: ["https://twitter.com/", "https://twitter.com/search?*"],
 	contentScriptWhen: 'start',
 	contentScriptFile: [
 		self.data.url("jquery-2.1.4.min.js"),
