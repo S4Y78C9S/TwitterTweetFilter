@@ -1,0 +1,27 @@
+{
+
+  "manifest_version": 2,
+  "name": "TwitterTweetFilter_WebExtension",
+  "version": "1.0",
+  "description": "Hide tweets including specified words.",
+
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/", "https://twitter.com/search?*"],
+      "js": ["jquery-3.1.0.min.js", "contents.js"]
+    }
+  ],
+
+  "applications": {
+    "gecko": {
+      "id": "TwitterTweetFilter_WebExtension@jetpack",
+      "update_url": "https://addons.mozilla.org/en-US/firefox/addon/twittertweetfilter/"
+    }
+  },
+
+  "options_ui": {
+    "page": "options.html"
+  },
+
+  "permissions": ["storage"]
+}
