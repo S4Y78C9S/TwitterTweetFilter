@@ -109,7 +109,7 @@ function main() {
 	
   });
   */
-};
+}
 
 
 
@@ -126,7 +126,7 @@ var observer = new MutationObserver(function(mutations) {
 });
  
 
-var config = { childList: true, subtree:true }
+var config = { childList: true, subtree:true };
 
 
 observer.observe( document, config);
